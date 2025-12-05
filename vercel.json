@@ -1,31 +1,37 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "public",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "api/index.php",
-            "use": "vercel-php@0.7.2"
-        }
+        { "src": "public", "use": "@vercel/static" },
+        { "src": "api/index.php", "use": "vercel-php@0.7.2" }
     ],
     "routes": [
-        {
-            "src": "/(build|assets|images|css|js)/(.*)",
-            "dest": "/public/$1/$2"
-        },
-        {
-            "src": "/storage/(.*)",
-            "dest": "/public/storage/$1"
-        },
-        {
-            "src": "/favicon.ico",
-            "dest": "/public/favicon.ico"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
-    ]
+        { "src": "/(build|assets|images|css|js)/(.*)", "dest": "/public/$1/$2" },
+        { "src": "/storage/(.*)", "dest": "/public/storage/$1" },
+        { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+        { "src": "/(.*)", "dest": "/api/index.php" }
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://timgravid-app-murex.vercel.app",
+        "APP_KEY": "base64:+y5p7eBc4zy61ukBxizXlR/pvm/Bs4arCogE8nzNdxI=",
+        
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "gateway01.ap-southeast-1.prod.aws.tidbcloud.com",
+        "DB_PORT": "4000",
+        "DB_DATABASE": "test",
+        "DB_USERNAME": "3P58jDZ3ScEdSLA.root",
+        "DB_PASSWORD": "rCQkaNNO38oFCFEG",
+
+        "SESSION_DRIVER": "cookie",
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp"
+    }
 }
