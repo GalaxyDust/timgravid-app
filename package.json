@@ -4,7 +4,9 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "vercel-migrate": "php artisan migrate:fresh --seed --force",
+        "vercel-storage-link": "php artisan storage:link"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
