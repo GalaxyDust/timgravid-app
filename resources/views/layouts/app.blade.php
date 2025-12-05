@@ -17,7 +17,7 @@
                 <!-- Logo -->
                 <a href="{{ route('landing') }}" class="flex items-center gap-2 group">
                     <img id="navbar-logo" 
-                         src="{{ asset('Images/logo-white.png') }}" 
+                         src="{{ asset('images/logo-white.png') }}" 
                          data-white="{{ asset('Images/logo-white.png') }}"
                          data-green="{{ asset('Images/logo-green.png') }}"
                          alt="Logo" class="h-12 w-auto transform transition group-hover:scale-105 drop-shadow-md">
@@ -111,7 +111,7 @@
                 <!-- Kolom 1: Brand & Intro -->
                 <div class="lg:col-span-2 space-y-6 text-center md:text-left">
                     <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
-                        <img src="{{ asset('Images/logo-white.png') }}" alt="Logo" class="h-10 w-auto">
+                        <img src="{{ asset('images/logo-white.png') }}" alt="Logo" class="h-10 w-auto">
                         <div class="flex flex-col items-start">
                             <span class="text-xl font-bold tracking-widest font-serif text-cream">TIMGRAVID</span>
                             <span class="text-[10px] tracking-[0.3em] text-accent uppercase font-bold">EST. 2025</span>

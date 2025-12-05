@@ -23,7 +23,7 @@
             <!-- 1. HEADER CARD (Logo & Judul) -->
             <div class="text-center mb-8 animate-fade-in-down">
                 <a href="{{ route('landing') }}" class="inline-block transition-transform hover:scale-105">
-                    <img src="{{ asset('Images/logo-green.png') }}" 
+                    <img src="{{ asset('images/logo-green.png') }}" 
                          alt="TIMGRAVID" 
                          class="h-16 w-auto mx-auto mb-4">
                 </a>

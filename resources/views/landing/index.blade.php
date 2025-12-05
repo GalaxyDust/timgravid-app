@@ -12,7 +12,7 @@
     <section id="hero-section" class="relative h-[100vh] min-h-[600px] flex items-center justify-center text-center px-4 overflow-hidden">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('Images/hero-background.jpg') }}" 
+            <img src="{{ asset('images/hero-background.jpg') }}" 
                  alt="Background Pemakaman" 
                  class="w-full h-full object-cover transform scale-105 filter brightness-[0.55]">
             <!-- Gradient Overlay -->
