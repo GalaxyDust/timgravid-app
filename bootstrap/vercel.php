@@ -4,9 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
-// Ini adalah file bootstrap/app.php yang dimodifikasi
-// untuk berjalan di Vercel.
-
+// Buat instance aplikasi seperti biasa
 $app = Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
@@ -18,9 +16,12 @@ $app = Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
-    });
+    })->create();
 
-// PENTING: Mengarahkan semua path storage ke direktori /tmp yang diizinkan Vercel
+// [INI PERBAIKANNYA]
+// Setelah aplikasi dibuat, kita "paksa" path storage-nya
+// Ini adalah cara manual yang pasti berhasil
 $app->useStoragePath('/tmp/storage');
 
+// Kembalikan instance aplikasi yang sudah dimodifikasi
 return $app;
