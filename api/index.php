@@ -1,8 +1,12 @@
 <?php
 
-// Define a writable path for Laravel's storage.
-// Vercel only allows writing to the /tmp directory.
-define('LARAVEL_STORAGE_PATH', '/tmp');
+// Muat bootstrap Vercel
+$app = require __DIR__.'/../bootstrap/vercel.php';
 
-// Bootstrap Laravel
-require __DIR__ . '/../public/index.php';
+// Handle request
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+$response->send();
+$kernel->terminate($request, $response);
